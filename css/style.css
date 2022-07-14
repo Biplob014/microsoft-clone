@@ -49,19 +49,16 @@
 /* sticky navigation */
 .sticky .mobile-nav-class {
   position: fixed;
-  /* positoning center in view port with position fixed */
   top: 0;
   left: 50%;
   transform: translate(-50%);
-
-  /* this height is important for adding sticky class just same height, before when hero section is going to invisible */
   height: 7rem;
   width: 100%;
   background-color: rgba(255, 255, 255, 0.95);
   box-shadow: 0 1.2rem 3.2rem rgba(0, 0, 0, 0.03);
   z-index: 200;
 }
-/* to avoid jumping added lost height of navbar when sticky class is present */
+
 .sticky .hero {
   margin-top: 7rem;
 }
