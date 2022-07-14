@@ -13,18 +13,15 @@ allLinks.forEach((link) => {
   link.addEventListener("click", (event) => {
     event.preventDefault();
     let href = link.getAttribute("href");
-
     // scroll back to top
     if (href === "#") {
       scrollTo({ top: 0, behavior: "smooth" });
     }
-
     // scroll to other's link
     if (href !== "#" && href.startsWith("#")) {
       let sectionEl = document.querySelector(href);
       sectionEl.scrollIntoView({ behavior: "smooth" });
     }
-
     // close mobile nav
     if (event.target.classList.contains("nav-link"))
       headerEl.classList.toggle("nav-open");
@@ -38,7 +35,6 @@ let heroEl = document.querySelector(".hero");
 let obs = new IntersectionObserver(
   (entries) => {
     let ent = entries[0];
-
     // adding and removing sticky class from the head
     if (!ent.isIntersecting) document.body.classList.add("sticky");
 
@@ -48,8 +44,6 @@ let obs = new IntersectionObserver(
     // in the viewport
     root: null,
     threshold: 0,
-    // rootmargin will basically apply ooutside of (root:null). It will only work with px unit and
-    // sticky class height will be present. sticky's height will be add here
     rootMargin: "-70px",
   }
 );
@@ -66,8 +60,6 @@ b2topContainer.addEventListener("click", () => {
   scrollTo({ top: 0, behavior: "smooth" });
 });
 
-// this code will execute when screen size is greater than 560
-// window.addEventListener("resize", () => {
 if (window.innerWidth > 560) {
   // footer observer
   let footerObs = new IntersectionObserver(
@@ -79,7 +71,6 @@ if (window.innerWidth > 560) {
     {
       root: null,
       threshold: 0,
-      // rootMargin: "-30px",
     }
   );
   footerObs.observe(footer);
@@ -94,9 +85,7 @@ if (window.innerWidth > 560) {
     {
       root: null,
       threshold: 0,
-      // rootMargin:
     }
   );
   mainHeroObs.observe(mainHero);
 }
-// });
