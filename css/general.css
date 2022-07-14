@@ -1,0 +1,277 @@
+/* 
+----- 01. TYPOGRAPHY SYSTEM-----
+- FONT SIZES(px)
+  10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+
+- FONT WEIGHTS
+  Deafult: 400,
+  Medium:500,
+  Bold:700
+
+- LINE HEIGHTS
+  
+  Small: 1.4
+  MEDIUM: 1.6
+ 
+
+- LETTER SPACING
+  0.5px
+  
+
+------02. COLORS-----
+- PRIMARY: 
+#ced4da
+
+- TINTS(lighter version):
+
+- SHADES(darker version): 
+
+- ACCENTS:
+
+- GREYS:
+background: #0067B8;
+background: #f2f2f2;
+
+----hero-icon-color:color: #868e96;
+----hero-icon-border-color: 1px solid #dee2e6;
+----hero-icon-background-color: 1px solid #f8f9fa;
+--link-color: color: #0067b8;
+
+  #616161;
+  #868e96;(lightest version of  #616161 )
+  #767676(darkest version of  #616161 )
+  #e9ecef(lightest version of #555)
+  #343a40(lighetest version of #000)
+
+
+
+------05. SHADOWS-----
+--- hevron-back-forward: box-shadow: 0 0.8rem 1.2rem rgba(0, 0, 0, 0.07);
+
+------06. BORDER-RADIOUS------
+
+------07. WHITESPACE----
+
+-SPACING SYSTEM (px)
+   2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+
+
+*/
+
+/* ***************************** */
+/* Basic css */
+/* ***************************** */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+*:focus {
+  outline: 1px dashed rgba(118, 118, 118, 0.5);
+  outline-offset: 0.9rem;
+}
+html {
+  font-size: 62.5%;
+  /* scroll-behavior: smooth; */
+}
+body {
+  background-color: #fff;
+  color: #616161;
+  font-family: "Roboto", sans-serif;
+
+  /* it only works when there is nothing absolutely positioned with body */
+  overflow-x: hidden;
+}
+
+.container {
+  max-width: 120rem;
+  margin: 0 auto;
+}
+
+/* ***************************** */
+/* Reusable CSS*/
+/* ***************************** */
+.grid {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.grid-2-cols {
+  grid-template-columns: 55fr 45fr;
+}
+.grid-2-cols-gap {
+  gap: 3.2rem;
+}
+
+.grid-1-cols {
+  grid-template-columns: 1fr;
+}
+.card-grid {
+  display: grid;
+}
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ***************************** */
+/* Hero Section*/
+/* ***************************** */
+
+.nav-list .nav-link:link,
+.nav-list .nav-link:visited {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 1.4rem;
+
+  /* This use to avoid jumping */
+  border-bottom: 2px solid transparent;
+}
+
+.nav-list:hover .nav-link,
+.nav-list:active .nav-link {
+  color: currentColor;
+  border-bottom: 2px solid #767676;
+}
+.nav-icon:link,
+.nav-icon:visited {
+  color: currentColor;
+}
+.nav-icon:hover,
+.nav-icon:active {
+  color: currentColor;
+}
+.flex-end {
+  display: flex;
+}
+.chevron-down {
+  font-size: 1.2rem;
+  align-self: center;
+}
+.icon {
+  font-size: 2.4rem;
+}
+
+.heading-primary {
+  color: #343a40;
+  font-size: 2.4rem;
+}
+.text-primary {
+  font-size: 1.4rem;
+  line-height: 1.6;
+}
+
+.btn-black {
+  padding: 1.2rem 2.4rem;
+  background-color: #000;
+  cursor: pointer;
+  display: flex;
+}
+.link-black {
+  padding: 1.4rem;
+  cursor: pointer;
+  display: flex;
+}
+
+.btn-black-chevron-forward-icon {
+  font-size: 1.6rem;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.link-black-chevron-forward-icon {
+  font-size: 1.6rem;
+  color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-black .btn:link,
+.btn-black .btn:visited,
+.link-black .link:link,
+.link-black .link:visited {
+  font-size: 1.4rem;
+  font-weight: 700;
+
+  text-decoration: none;
+  border-bottom: 0.2rem solid transparent;
+  transition: transform 0.3s ease-in;
+}
+
+.btn-black .btn:link,
+.btn-black .btn:visited {
+  color: #fff;
+}
+.btn-black:hover .btn,
+.btn-black:active .btn {
+  border-bottom: 0.2rem solid currentColor;
+  transform: translateX(-0.4rem);
+}
+.btn-black .btn-black-chevron-forward-icon {
+  transition: transform 0.3s ease-in;
+}
+.btn-black:hover .btn-black-chevron-forward-icon,
+.btn-black:active .btn-black-chevron-forward-icon {
+  transform: translateX(0.4rem);
+}
+
+.link-black .link:link,
+.link-black .link:visited {
+  color: #000;
+  border-bottom: 0.2rem solid transparent;
+}
+
+.link-black:hover .link,
+.link-black:active .link {
+  border-bottom: 0.2rem solid currentColor;
+}
+
+.link-black .link-black-chevron-forward-icon {
+  transition: transform 0.3s ease-in;
+}
+
+.link-black:hover .link-black-chevron-forward-icon {
+  transform: translateX(0.4rem);
+}
+
+.btn-primary:focus {
+  outline: 1px dashed currentColor;
+  outline-offset: 0.9rem;
+}
+
+.absolute {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+}
+
+.dot {
+  display: block;
+  height: 0.7rem;
+  width: 0.7rem;
+  border-radius: 50%;
+  border: 1px solid #000;
+}
+.dot:hover {
+  background-color: #000;
+}
+.dot-fill {
+  background-color: #000;
+}
+.pause {
+  height: 2rem;
+  width: 2rem;
+  padding: 0.8rem;
+}
+.dot-pause {
+  position: absolute;
+  width: 100%;
+  bottom: -1.4rem;
+  bottom: 1.4rem;
+  cursor: pointer;
+}
